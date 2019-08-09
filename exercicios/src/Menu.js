@@ -7,8 +7,27 @@ import ParImpar from './componentes/ParImpar'
 import Inverter, { MegaSena } from './componentes/Multi'
 import ValidarProps from './componentes/ValidarProps'
 import Evento from './componentes/Evento'
+import Avo from './componentes/CominicacaoDireta'
+import TextoSincronizado from './componentes/CominicacaoIndireta'
+import ListaFlex from './componentes/ListaFlex'
+import Flex from './componentes/Flex'
 
 export default createDrawerNavigator({
+    Flex: {
+        screen: Flex,
+        navigationOptions: {title:'Flex'}
+    },
+    ListaFlex: {
+        screen: ListaFlex,
+        navigationOptions: {title:'ListaFlex'}
+    },
+    TextoSincronizado: {
+        screen: TextoSincronizado,
+        navigationOptions: {title:'Texto Sincronizado'}
+    },
+    Avo: {
+        screen: () => <Avo nome='João' sobrenome='Silva' />
+    },    
     Evento:{
         screen: Evento
     },
